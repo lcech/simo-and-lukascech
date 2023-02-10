@@ -1,6 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Simo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Simo & Lukáš Čech</title>
+    <meta name="description" content="A picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo">
+    <meta name="author" content="Lukáš Čech">
+    <link rel="icon" href="favicon.ico">
     <style type="text/css">
       html,
       body {
@@ -13,6 +19,8 @@
       img {
         max-width: 1024px;
       }
+      #img-07-MCLDN22,
+      #img-06-MCLDN22,
       #img-05-SPWK2022,
       #img-04-SPWK2020,
       #img-03-MCLDN,
@@ -27,6 +35,25 @@
         -ms-transition: all 1000ms linear;
         -o-transition: all 1000ms linear;
         transition: all 1000ms linear;
+      }
+      .img-07-SPWK2023 #img-07-MCLDN22 {
+        opacity: 1;
+      }
+      .img-07-SPWK2023 #img-06-MCLDN22 {
+        /*opacity: 1 !important;*/
+        left: 398px;
+        top: 463px;
+        transform: rotate(-3deg) scale(0.27);
+        transform-origin: top left;
+      }
+      .img-06-MCLDN22 #img-06-MCLDN22 {
+        opacity: 1;
+      }
+      .img-06-MCLDN22 #img-05-SPWK2022 {
+        left: 348px;
+        top: 463px;
+        transform: rotate(5deg) scale(0.20);
+        transform-origin: top left;
       }
       .img-05-SPWK2022 #img-05-SPWK2022 {
         opacity: 1;
@@ -67,16 +94,24 @@
       .img-01-SPWK2019 #img-01-SPWK2019 {
         opacity: 1;
       }
+      .img-07-MCLDN22 #img-06-MCLDN22.big,
+      .img-06-MCLDN22 #img-05-SPWK2022.big,
       .img-05-SPWK2022 #img-04-SPWK2020.big,
       .img-04-SPWK2020 #img-03-MCLDN.big,
       .img-03-MCLDN #img-02-MCCPH.big,
       .img-02-MCCPH #img-01-SPWK2019.big,
-      .img-01-SPWK2019 #img-05-SPWK2022.big {
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        -ms-transform: scale(1);
+      .img-01-SPWK2019 #img-07-SPWK2023.big {
+        -moz-transform: rotate(0deg) scale(1);
+        -webkit-transform: rotate(0deg) scale(1);
+        -o-transform: rotate(0deg) scale(1);
+        -ms-transform: rotate(0deg) scale(1);
         opacity: 1;
+      }
+      .img-07-MCLDN22 #img-06-MCLDN22.big {
+        transform: scale(1) translate(-398px, -463px);
+      }
+      .img-06-MCLDN22 #img-05-SPWK2022.big {
+        transform: scale(1) translate(-348px, -463px);
       }
       .img-05-SPWK2022 #img-04-SPWK2020.big {
         transform: scale(1) translate(-482px, -473px);
@@ -90,13 +125,23 @@
       .img-02-MCCPH #img-01-SPWK2019.big {
         transform: scale(1) translate(-572px, -368px);
       }
-      .img-01-SPWK2019 #img-05-SPWK2022.big {
+      .img-01-SPWK2019 #img-07-SPWK2023.big {
         transform: scale(1);
       }
     </style>
   </head>
   <body>
-    <div id="container" class="img-05-SPWK2022">
+    <div id="container" class="img-07-SPWK2023">
+      <img
+        id="img-07-SPWK2023"
+        src="img/Simo-07-SPWK2023.jpg"
+        alt="A picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo"
+      />
+      <img
+        id="img-06-MCLDN22"
+        src="img/Simo-06-MCLDN22.jpg"
+        alt="A picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo"
+      />
       <img
         id="img-05-SPWK2022"
         src="img/Simo-05-SPWK2022.jpg"
@@ -126,12 +171,14 @@
     <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
       var elements = [
+        "img-07-SPWK2023",   
+        "img-06-MCLDN22",
         "img-05-SPWK2022",
         "img-04-SPWK2020",
         "img-03-MCLDN",
         "img-02-MCCPH",
         "img-01-SPWK2019",
-        "img-05-SPWK2022"
+        "img-07-SPWK2023"
       ];
       var currentElement = 0;
       var animation = false;
@@ -144,7 +191,7 @@
             $("#container").removeClass(elements[currentElement]);
             $("#container").addClass(elements[currentElement + 1]);
             currentElement++
-            if (currentElement === 5) {
+            if (currentElement === 7) {
               currentElement = 0;
             }
             animation = false;
