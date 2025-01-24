@@ -208,8 +208,8 @@
         if (!animation) {
           animation = true;
           $("#" + elements[currentElement]).removeClass("big");
-          $("#" + elements[currentElement + 1]).addClass("big");
           setTimeout(function () {
+            $("#" + elements[currentElement + 1]).addClass("big");
             $("#container").removeClass(elements[currentElement]);
             $("#container").addClass(elements[currentElement + 1]);
             currentElement++
