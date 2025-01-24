@@ -19,7 +19,8 @@
       img {
         max-width: 1024px;
       }
-      #img-07-MCLDN22,
+      #img-08-MCLDN2023,
+      #img-07-SPWK2023,
       #img-06-MCLDN22,
       #img-05-SPWK2022,
       #img-04-SPWK2020,
@@ -36,7 +37,17 @@
         -o-transition: all 1000ms linear;
         transition: all 1000ms linear;
       }
-      .img-07-SPWK2023 #img-07-MCLDN22 {
+      .img-08-MCLDN2023 #img-08-MCLDN2023 {
+        opacity: 1;
+      }
+      .img-08-MCLDN2023 #img-07-SPWK2023 {
+        /*opacity: 1 !important;*/
+        left: 398px;
+        top: 463px;
+        transform: rotate(-3deg) scale(0.27);
+        transform-origin: top left;
+      }
+      .img-07-SPWK2023 #img-07-SPWK2023 {
         opacity: 1;
       }
       .img-07-SPWK2023 #img-06-MCLDN22 {
@@ -94,7 +105,8 @@
       .img-01-SPWK2019 #img-01-SPWK2019 {
         opacity: 1;
       }
-      .img-07-MCLDN22 #img-06-MCLDN22.big,
+      .img-08-MCLDN2023 #img-07-SPWK2023.big,
+      .img-07-SPWK2023 #img-06-MCLDN22.big,
       .img-06-MCLDN22 #img-05-SPWK2022.big,
       .img-05-SPWK2022 #img-04-SPWK2020.big,
       .img-04-SPWK2020 #img-03-MCLDN.big,
@@ -107,7 +119,10 @@
         -ms-transform: rotate(0deg) scale(1);
         opacity: 1;
       }
-      .img-07-MCLDN22 #img-06-MCLDN22.big {
+      .img-08-MCLDN2023 #img-07-SPWK2023.big {
+        transform: scale(1) translate(-398px, -463px);
+      }
+      .img-07-SPWK2023 #img-06-MCLDN22.big {
         transform: scale(1) translate(-398px, -463px);
       }
       .img-06-MCLDN22 #img-05-SPWK2022.big {
@@ -125,13 +140,18 @@
       .img-02-MCCPH #img-01-SPWK2019.big {
         transform: scale(1) translate(-572px, -368px);
       }
-      .img-01-SPWK2019 #img-07-SPWK2023.big {
+      .img-01-SPWK2019 #img-08-MCLDN2023.big {
         transform: scale(1);
       }
     </style>
   </head>
   <body>
-    <div id="container" class="img-07-SPWK2023">
+    <div id="container" class="img-08-MCLDN2023" title="Click me!">
+      <img
+        id="img-08-MCLDN2023"
+        src="img/Simo-08-MCLDN2023.jpg"
+        alt="A picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo holding a picture of Lukáš & Simo"
+      />
       <img
         id="img-07-SPWK2023"
         src="img/Simo-07-SPWK2023.jpg"
@@ -171,6 +191,7 @@
     <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
       var elements = [
+        "img-08-MCLDN2023",
         "img-07-SPWK2023",   
         "img-06-MCLDN22",
         "img-05-SPWK2022",
@@ -178,7 +199,7 @@
         "img-03-MCLDN",
         "img-02-MCCPH",
         "img-01-SPWK2019",
-        "img-07-SPWK2023"
+        "img-08-MCLDN2023"
       ];
       var currentElement = 0;
       var animation = false;
@@ -191,7 +212,7 @@
             $("#container").removeClass(elements[currentElement]);
             $("#container").addClass(elements[currentElement + 1]);
             currentElement++
-            if (currentElement === 7) {
+            if (currentElement === 8) {
               currentElement = 0;
             }
             animation = false;
